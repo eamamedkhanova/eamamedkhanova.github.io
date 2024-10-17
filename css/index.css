@@ -1,5 +1,5 @@
 body {   
-    /* Местоположение фоновой картинки */   background-image: url(../img/fon_index.jpg);      
+    /* Местоположение фоновой картинки */   background-image: url(../img/fon.jpg);      
     /* Фоновое изображение выровнено по центру в горизонтальной и вертикальной плоскостях */   background-position: center center;      
     /* Фон не повторяется */   background-repeat: no-repeat;      
     /* Фон зафиксирован в области просмотра и потому не двигается, когда высота контента превышает высоту изображения */   background-attachment: fixed;      
