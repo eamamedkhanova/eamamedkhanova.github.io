@@ -1,7 +1,113 @@
 <!DOCTYPE html>
 <html>
-<body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+    <style>
+        p {
+         font-family: Verdana, Arial, Helvetica, sans-serif; 
+         font-size: 14pt;
+        }
+    </style>   
+    <head>
+        <meta charset="UTF-8">
+        <title>Фитнес</title>
+        <link rel="stylesheet" href="/css/index.css" type="text/css"/>
+        <link rel="stylesheet" href="/css/menu.css" type="text/css"/>
+        <link rel="stylesheet" href="/css/feedback.css" type="text/css"/>
+    </head>
+<body >
+    
+
+<div>
+<ul id="navbar">
+        <li  style="background-color: #f90"><a href="./index.html">Главная</a></li>
+        <li><a href="./calculator.html">Калькулятор</a></li>
+        <li><a href="#">Услуги</a>
+            <ul>
+                <li><a href="./pool.html">Бассейн</a></li>
+                <li><a href="#">Йога</a></li>
+                <li><a href="#">Кардио</a></li>
+              </ul>
+        </li>
+        <li><a href="./class_schedule.html">Расписание</a></li>
+        <li><a href="./photo_gallery.html">Фотогалерея</a></li>
+        <li><a href="./info.html">Информация</a></li>
+      </ul>
+</div>
+
+<div>
+    <table>
+        <tr>
+         <td style="color: #a8c6e2 " width="1000">
+            <p  font-size: 280%>
+            Клуб премиум-класса, расположенный на 1140 кв. м. для людей, ценящих комфорт,
+             высокий уровень обслуживания и лучшее техническое оснащение. В нашем клубе вы найдете <a href="./pool.html">бассейн</a>, <a href="./yoga.html">йогу</a> и <a href="./cardio.html">кардио</a>. 
+             Наш клуб ориентирован на европейский стиль и является закрытым клубом.
+            Цель, к которой мы стремимся, — это повышение качества жизни людей, мы направляем все свои усилия на ее реализацию и продвижения стиля жизни Wellness,
+             обеспечивающего каждому из нас психофизическое благополучие, которое поможет нам легко справляться с проблемами повседневной жизни.
+            Наш клуб предоставляет профессиональные фитнес-услуги на новом уровне и удовлетворит даже самых требовательных посетителей.
+        </p>
+    </td>
+        </tr>
+        <!--tr>
+            <td><img src="./img/resep.jpg"  target="_blank" alt="Ресепшн" hspace="50" vspace="10"></td>
+          </tr-->
+       </table>
+</div>
+
+<div>
+    <table style="color: #d7dfe6 ">
+        <tr>
+         <td>
+            <form action="" method="get">
+                <label>
+                    Имя:
+                    <input
+                        type="text"
+                        name="name"
+                        value="Галина" onblur="if(this.value.length == 0) this.value = 'Ваше имя'" onfocus="if(this.value == 'Ваше имя') this.value = 'Галина' ">
+                </label>
+                <label>
+                    Номер группы:
+                    <input
+                        type="number"
+                        name="number">
+                </label>
+                <label>
+                    Телефон для обратной связи:
+                    <input
+                        type="tel"
+                        name="tel"
+                        value="8916737484" onblur="if(this.value.length == 0) this.value = 'Номер телефона'" onfocus="if(this.value == 'Номер телефона') this.value = '8916737484' ">
+                </label>
+                <label>
+                    Электронная почта:
+                    <input
+                        type="email"
+                        name="email"
+                        value="galina@gooogle.ru" onblur="if(this.value.length == 0) this.value = 'E-mail'" onfocus="if(this.value == 'E-mail') this.value = 'galina@gooogle.ru' ">
+                </label>
+                <label>
+                    Согласен с обработкой ПД:
+                    <input
+                        type="checkbox"
+                        name="checkbox">
+                </label>
+
+
+                <label>
+                    Пожелание:
+                    <textarea name="comment" onblur="if(this.value.length == 0) this.value = 'Комментарий'" onfocus="if(this.value == 'Комментарий') this.value='Хочу записаться в бассейн на среду'">Ваше пожелание</textarea>
+                </label>
+                <button type="submit">
+                    Отправить
+                </button>
+            </form>
+    </td>
+        </tr>
+       </table>
+</div>
+
+
+
+
 </body>
 </html>
