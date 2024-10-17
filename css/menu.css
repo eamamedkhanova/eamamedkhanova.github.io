@@ -1,6 +1,6 @@
 #navbar ul {
     display: none;
-    background-color: #f90;
+    background-color: rgb(100, 149, 204);
     position: absolute;
     top: 100%;
   }
@@ -13,7 +13,7 @@
   #navbar {
     height: 30px;
     /* background-color: #666; */
-    padding-left: 25px;
+    padding-left: 45px;
     min-width: 470px;
   }
   #navbar li {
