@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Решение алгоритмической задачи</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+        }
+
+        button {
+            padding: 10px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+
+        .result {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Решение алгоритмической задачи</h1>
+        <p>Введите значения X и Y:</p>
+        <input type="number" id="inputX" placeholder="X" step="any">
+        <input type="number" id="inputY" placeholder="Y" step="any">
+        <button id="calculateBtn">Рассчитать Z</button>
+        <div class="result" id="result"></div>
+    </div>
+
+    <script>
+        document.getElementById('calculateBtn').addEventListener('click', function () {
+            const x = parseFloat(document.getElementById('inputX').value);
+            const y = parseFloat(document.getElementById('inputY').value);
+            let z;
+
+            if (x && y) {
+                z = 1 / (x * y);
+                document.getElementById('result').innerText = `Z = ${z}`;
+                sendDataToServer(x, y, z);
+            } else {
+                document.getElementById('result').innerText = 'Пожалуйста, введите корректные значения для X и Y.';
+            }
+        });
+
+        function sendDataToServer(x, y, z) {
+            const data = {
+                condition: 'Z = 1 / (XY)',
+                x: x,
+                y: y,
+                result: z
+            };
+
+            fetch('https://ваш-домен.com/api/your-endpoint', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data)
+            })
+                .then(response => response.json())
+                .then(data => {
+                    console.log('Успех:', data);
+                })
+                .catch((error) => {
+                    console.error('Ошибка:', error);
+                });
+        }
+    </script>
+
+</body>
+
+</html>
