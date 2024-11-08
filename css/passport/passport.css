@@ -22,12 +22,6 @@
     word-spacing: 0.25em;
 }
 
-@font-face {
-    font-family: 'Kreadon';
-    src: local('Kreadon.ttf'),
-        url (/Kreadon.ttf.ttf);
-}
-
 .vidanstr1 {
     font-family: 'Kreadon';
     padding-top: 20px;
